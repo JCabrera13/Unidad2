@@ -1,0 +1,10 @@
+is_global = true
+build_property.TargetFramework = net5.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.PublishSingleFile = 
+build_property.IncludeAllContentForSelfExtract = 
+build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
+build_property.RootNamespace = u2_aspnetcore_mvc
+build_property.ProjectDir = C:\Users\Cabrera\Desktop\7 Semestre\7 Semestre\3-. Programacion Avanzada (asp .net)\Unidad2\Unidad2\AspMvc\u2-aspnetcore-mvc\u2-aspnetcore-mvc\

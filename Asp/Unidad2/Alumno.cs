@@ -7,12 +7,12 @@ namespace Unidad2
 {
     public class Alumno
     {
-        private int _intNumeroControl;
+        private string _strNoControl;
 
-        public int NumeroControl
+        public string NumeroControl
         {
-            get { return _intNumeroControl; }
-            set { _intNumeroControl = value; }
+            get { return _strNoControl; }
+            set { _strNoControl = value; }
         }
 
         private string _strNombre;

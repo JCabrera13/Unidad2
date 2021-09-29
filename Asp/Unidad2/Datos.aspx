@@ -14,5 +14,7 @@
     <asp:Button ID="btnAgregar" runat="server" Text="Agregar" OnClick="btnAgregar_Click" />
         
     <asp:Label ID="lblNoControl" runat="server"></asp:Label>
+    <br />
+    <asp:GridView ID="dgalumnos" runat="server"></asp:GridView>
         
 </asp:Content>
