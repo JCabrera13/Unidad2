@@ -1,0 +1,15 @@
+﻿@model ViewModelAlumnoEncuesta
+
+<h1>Gracias por responder la encuesta</h1>
+<p>
+    <!--model = variable que se recibe-->
+    @if (Model.Respuesta == true)
+    { 
+        @: Te esperamos pronto!
+    }
+      else
+      {
+        @: Hay que seguir cuidandonos!
+      }
+</p>
+<a asp-action="ListadoRespuestas">Ver las demás respuestas</a>

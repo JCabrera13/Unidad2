@@ -1,0 +1,15 @@
+﻿@model List<ViewModelAlumnoEncuesta>
+
+<h1>Listado de respuestas</h1>
+
+<table class="table table-striped">
+    @foreach (ViewModelAlumnoEncuesta alumnoEncuesta in Model)
+    {
+<tr>
+    <td>@alumnoEncuesta.Nombre</td>
+    <td>@alumnoEncuesta.Email</td>
+    <td>@alumnoEncuesta.Carrera</td>
+    <td>@alumnoEncuesta.Respuesta</td>
+</tr>}
+
+</table>

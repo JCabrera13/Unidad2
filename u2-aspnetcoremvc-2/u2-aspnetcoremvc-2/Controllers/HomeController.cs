@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using u2_aspnetcore_mvc.Models;
+using u2_aspnetcoremvc_2.Models;
 
-namespace u2_aspnetcore_mvc.Controllers
+namespace u2_aspnetcoremvc_2.Controllers
 {
     public class HomeController : Controller
     {
@@ -23,11 +23,33 @@ namespace u2_aspnetcore_mvc.Controllers
             return View();
         }
 
-        //metodos publicos son considerados endpoint
         public IActionResult Privacy()
         {
             return View();
         }
+
+        [HttpGet]//cuando se hace por medio de get, se invoca el primero 
+        public IActionResult Encuesta()
+        {
+            return View();
+        }
+
+        //sobre carga del endpoint
+        [HttpPost] //cuando se hace por medio de get, se invoca el primero 
+        public IActionResult Encuesta (ViewModelAlumnoEncuesta alumno)
+        {
+            Datos.AgregarRespuesta(alumno);
+            //con el metodo view solo regresa codigo html hacia el navegador, pero no invoca ningun endpoint
+            return View("Agradecimiento", alumno);
+        }
+
+
+        //[HttpGet]
+        public IActionResult ListadoRespuestas()
+        {
+            return View("ListadoRespuestas", Datos.Respuestas);
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

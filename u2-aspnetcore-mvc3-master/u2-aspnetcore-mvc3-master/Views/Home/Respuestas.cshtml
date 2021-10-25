@@ -1,0 +1,21 @@
+﻿@model List<Empleado>
+
+<h1>Listado de respuestas</h1>
+
+<table class="table table-striped">
+    @foreach (Empleado miEmpleado in Model)
+    {
+    <tr>
+        <td>@miEmpleado.NumeroEmpleado</td>
+        <td>@miEmpleado.NombreCompleto</td>
+        <td>@miEmpleado.Sueldo</td>
+        <td>@miEmpleado.HorasTrabajadas</td>
+        <td>@miEmpleado.Puesto</td>
+        <td>@Html.ActionLink("Editar", "EditarEmpleado", new { numEmpleado = miEmpleado.NumeroEmpleado })</td>
+        <td>@Html.ActionLink("Eliminar", "EliminarEmpleado", new { numEmpleado = miEmpleado.NumeroEmpleado })</td>
+
+
+    </tr>
+}
+
+</table>

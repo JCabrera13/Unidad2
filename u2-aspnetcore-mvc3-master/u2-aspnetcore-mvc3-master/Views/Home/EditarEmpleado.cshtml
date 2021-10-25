@@ -1,0 +1,30 @@
+﻿@model Empleado
+
+<div asp-validation-summary="All"></div>
+<form asp-action="EditarEmpleado" method="post">
+    <div>
+        <label>Numero de empleado:</label>
+        <input asp-for="NumeroEmpleado"  readonly/>
+    </div>
+
+    <div>
+        <label>Nombe completo:</label>
+        <input asp-for="NombreCompleto" />
+    </div>
+
+    <div>
+        <label>Sueldo:</label>
+        <input asp-for="Sueldo" />
+    </div>
+
+    <div>
+        <label>Horas trabajadas:</label>
+        <input asp-for="HorasTrabajadas" />
+    </div>
+
+    <div>
+        <label>Puesto:</label>
+        <input asp-for="Puesto" />
+    </div>
+    <button type="submit">Guardar</button>
+</form>

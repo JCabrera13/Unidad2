@@ -1,0 +1,4 @@
+﻿@model Empleado
+<h3>Desea eliminar al empleado @Model.NombreCompleto?</h3>
+<a asp-action="Respuestas">No</a>
+@Html.ActionLink("Si", "ConfirmacionEliminarEmpleado", new { numEmpleado = Model.NumeroEmpleado })

@@ -1,0 +1,11 @@
+﻿@model Empleado
+
+<h1>Empleado registrado exitosamente</h1>
+
+@if (Model.Puesto == null)
+{
+<p>Se ha agregado al empleado @Model.NombreCompleto, sin puesto</p> }
+            else
+            {
+<p>Se ha agregado al empleado @Model.NombreCompleto, con el puesto @Model.Puesto</p>}
+<a asp-action="Respuestas">Ver empleados</a>
