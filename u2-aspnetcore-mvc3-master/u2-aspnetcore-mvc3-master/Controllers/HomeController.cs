@@ -67,18 +67,17 @@ namespace u2_aspnetcore_mvc3.Controllers
             return RedirectToAction("Respuestas");
         }
 
-        public IActionResult EliminarEmpleado (int noEmpleado)
+        public IActionResult EliminarEmpleado (int numEmpleado)
         {
-            Empleado e = Datos.Empleados.Where(e => e.NumeroEmpleado ==noEmpleado).FirstOrDefault();
-            return View();
+            Empleado empleado = Datos.Empleados.Where(e => e.NumeroEmpleado == numEmpleado).FirstOrDefault();
+            return View(empleado);
         }
 
-        [HttpPost]
         public IActionResult ConfirmacionEliminarEmpleado(int numEmpleado)
         {
-            Empleado e = Datos.Empleados.Where(e => e.NumeroEmpleado == numEmpleado).FirstOrDefault();
+            Empleado empleado = Datos.Empleados.Where(e => e.NumeroEmpleado == numEmpleado).FirstOrDefault();
             //eliminar al empleado de la coleccion.
-            Datos.EliminarEmpleado(e);
+            Datos.EliminarEmpleado(empleado);
             return RedirectToAction("Respuestas");
         }
 
